@@ -47,6 +47,13 @@ class RouterTypeTests: XCTestCase {
   
   // MARK: - API Key Tests
   
+  func test_GetPrivateKey_NotNone() {
+    
+    print(testRouter.privateKey)
+    
+    XCTAssertNotEqual(testRouter.privateKey, "none")
+    
+  }
   
 }
 
