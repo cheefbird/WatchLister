@@ -90,10 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				06019D6C1F92E9ED0003AD1D /* AppDelegate.swift */,
-				06019D6E1F92E9ED0003AD1D /* ViewController.swift */,
-				06019D701F92E9ED0003AD1D /* Main.storyboard */,
+				069C6B271F92F7B200E5D470 /* Storyboards */,
+				069C6B281F92F7CC00E5D470 /* Views */,
 				06019D731F92E9ED0003AD1D /* Assets.xcassets */,
-				06019D751F92E9ED0003AD1D /* LaunchScreen.storyboard */,
 				06019D781F92E9ED0003AD1D /* Info.plist */,
 			);
 			path = WatchLister;
@@ -106,6 +105,23 @@
 				06019D831F92E9ED0003AD1D /* Info.plist */,
 			);
 			path = WatchListerTests;
+			sourceTree = "<group>";
+		};
+		069C6B271F92F7B200E5D470 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				06019D701F92E9ED0003AD1D /* Main.storyboard */,
+				06019D751F92E9ED0003AD1D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		069C6B281F92F7CC00E5D470 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				06019D6E1F92E9ED0003AD1D /* ViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A5F245A5EDDE498584E14CA3 /* Frameworks */ = {
