@@ -12,8 +12,8 @@
 		06019D721F92E9ED0003AD1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06019D701F92E9ED0003AD1D /* Main.storyboard */; };
 		06019D741F92E9ED0003AD1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06019D731F92E9ED0003AD1D /* Assets.xcassets */; };
 		06019D771F92E9ED0003AD1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06019D751F92E9ED0003AD1D /* LaunchScreen.storyboard */; };
-		06019D821F92E9ED0003AD1D /* WatchListerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06019D811F92E9ED0003AD1D /* WatchListerTests.swift */; };
 		069C6B2B1F92FB1000E5D470 /* RouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069C6B2A1F92FB1000E5D470 /* RouterType.swift */; };
+		069C6B301F92FD5600E5D470 /* RouterTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069C6B2F1F92FD5600E5D470 /* RouterTypeTests.swift */; };
 		0744EBA1178FBD2E10A37C40 /* Pods_WatchLister.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6434AB4336935AD6415C53A /* Pods_WatchLister.framework */; };
 		E735BD1345A307DAEA338217 /* Pods_WatchListerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FC1CFA0CC14D63C720907E /* Pods_WatchListerTests.framework */; };
 /* End PBXBuildFile section */
@@ -37,9 +37,9 @@
 		06019D761F92E9ED0003AD1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06019D781F92E9ED0003AD1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06019D7D1F92E9ED0003AD1D /* WatchListerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchListerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		06019D811F92E9ED0003AD1D /* WatchListerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListerTests.swift; sourceTree = "<group>"; };
 		06019D831F92E9ED0003AD1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		069C6B2A1F92FB1000E5D470 /* RouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterType.swift; sourceTree = "<group>"; };
+		069C6B2F1F92FD5600E5D470 /* RouterTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTypeTests.swift; sourceTree = "<group>"; };
 		27FC1CFA0CC14D63C720907E /* Pods_WatchListerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchListerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFA24A8E58AF3425AE68B68 /* Pods-WatchLister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchLister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchLister/Pods-WatchLister.debug.xcconfig"; sourceTree = "<group>"; };
 		9DC9A412F9B487401F0D9599 /* Pods-WatchListerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchListerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchListerTests/Pods-WatchListerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		06019D801F92E9ED0003AD1D /* WatchListerTests */ = {
 			isa = PBXGroup;
 			children = (
-				06019D811F92E9ED0003AD1D /* WatchListerTests.swift */,
+				069C6B2E1F92FD1800E5D470 /* ApiTests */,
 				06019D831F92E9ED0003AD1D /* Info.plist */,
 			);
 			path = WatchListerTests;
@@ -133,6 +133,14 @@
 				069C6B2A1F92FB1000E5D470 /* RouterType.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		069C6B2E1F92FD1800E5D470 /* ApiTests */ = {
+			isa = PBXGroup;
+			children = (
+				069C6B2F1F92FD5600E5D470 /* RouterTypeTests.swift */,
+			);
+			path = ApiTests;
 			sourceTree = "<group>";
 		};
 		A5F245A5EDDE498584E14CA3 /* Frameworks */ = {
@@ -367,7 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06019D821F92E9ED0003AD1D /* WatchListerTests.swift in Sources */,
+				069C6B301F92FD5600E5D470 /* RouterTypeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
