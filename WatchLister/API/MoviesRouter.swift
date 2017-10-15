@@ -43,7 +43,7 @@ enum MoviesRouter: RouterType, URLRequestConvertible {
     switch self {
     case .getMovies:
       params["sort_by"] = "popularity.desc"
-      params["include_adult"] = false
+      params["include_adult"] = "false"
     }
     
     return params
@@ -56,7 +56,7 @@ enum MoviesRouter: RouterType, URLRequestConvertible {
     var baseRequest = URLRequest(url: requestURL)
     baseRequest.httpMethod = method.rawValue
     
-    let encoding = URLEncoding.queryString
+    let encoding = URLEncoding.default
     
     return try encoding.encode(baseRequest, with: parameters)
   }
