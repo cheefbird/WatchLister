@@ -30,7 +30,7 @@ class RouterTypeTests: XCTestCase {
   }
   
   
-  // MARK: - Tests
+  // MARK: - Base URL Tests
   
   func test_Router_BaseURLasString_IsMovieDB() {
     let urlString = String(describing: testRouter.baseURL)
@@ -43,6 +43,9 @@ class RouterTypeTests: XCTestCase {
     
     XCTAssertEqual(testRouter.baseURL, movieDBURL)
   }
+  
+  
+  // MARK: - API Key Tests
   
   
 }
