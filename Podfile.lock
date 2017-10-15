@@ -1,0 +1,50 @@
+PODS:
+  - Alamofire (4.5.1)
+  - Realm (2.10.2):
+    - Realm/Headers (= 2.10.2)
+  - Realm/Headers (2.10.2)
+  - RealmSwift (2.10.2):
+    - Realm (= 2.10.2)
+  - RxCocoa (4.0.0-rc.0):
+    - RxSwift (~> 4.0.0-rc.0)
+  - RxSwift (4.0.0-rc.0)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - RealmSwift
+  - RxCocoa (from `https://github.com/ReactiveX/RxSwift.git`, branch `rxswift4.0-swift4.0`, tag `4.0.0-rc.0`)
+  - RxSwift (from `https://github.com/ReactiveX/RxSwift.git`, branch `rxswift4.0-swift4.0`, tag `4.0.0-rc.0`)
+  - SwiftyJSON
+
+EXTERNAL SOURCES:
+  RxCocoa:
+    :branch: rxswift4.0-swift4.0
+    :git: https://github.com/ReactiveX/RxSwift.git
+    :tag: 4.0.0-rc.0
+  RxSwift:
+    :branch: rxswift4.0-swift4.0
+    :git: https://github.com/ReactiveX/RxSwift.git
+    :tag: 4.0.0-rc.0
+
+CHECKOUT OPTIONS:
+  RxCocoa:
+    :commit: 05e26184d9699d360e6710121b245935d8cbe25a
+    :git: https://github.com/ReactiveX/RxSwift.git
+    :tag: 4.0.0-rc.0
+  RxSwift:
+    :commit: 05e26184d9699d360e6710121b245935d8cbe25a
+    :git: https://github.com/ReactiveX/RxSwift.git
+    :tag: 4.0.0-rc.0
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
+  RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
+  RxCocoa: 58841348f4c6e6f6cd244522c16a6b7df5008956
+  RxSwift: f0ff3c78e1f71a7d3506defde0b79c72fe39bac3
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 112f6bede915fc339b81193b37a2ef5d23fd1d40
+
+COCOAPODS: 1.2.0
