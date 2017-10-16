@@ -7,3 +7,36 @@
 //
 
 import Foundation
+import ObjectMapper
+
+
+class TMDBMovie: MovieObjectType, Mappable {
+  
+  required public init?(map: Map) { }
+  
+  
+  var title = ""
+  var posterPath = ""
+  var summary = ""
+  var releaseDate = ""
+  var id = ""
+  var backdropPath = ""
+  var score = 0.0
+  var isFavorite = false
+  
+  func mapping(map: Map) {
+    title <- map["title"]
+    posterPath <- map["poster_path"]
+    summary <- map["overview"]
+    releaseDate <- map["release_date"]
+    id <- map["id"]
+    backdropPath <- map["backdrop_path"]
+    score <- map["vote_average"]
+  }
+  
+  
+  
+  
+  
+  
+}
