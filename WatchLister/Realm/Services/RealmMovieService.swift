@@ -32,6 +32,9 @@ class RealmMovieService: MovieServiceType {
     
     // MARK: - From Realm
     
-    fileprivate func getMovieFromDb(withId id: Int, completion: @escaping MovieResult)
+    fileprivate func getMovieFromDb(withId id: Int, completion: @escaping MovieResponse) {
+        let object = realm.object(ofType: RealmMovie.self, forPrimaryKey: id)
+        completion(object, nil)
+    }
     
 }
