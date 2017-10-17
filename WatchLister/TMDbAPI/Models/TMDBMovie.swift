@@ -18,7 +18,7 @@ class TMDBMovie: MovieObjectType, Mappable {
   var title = ""
   var posterPath = ""
   var summary = ""
-  var releaseDate = Date(timeIntervalSince1970: 0)
+  var releaseDate = ""
   var id = 0
   var backdropPath = ""
   var score: Float = 0.0
@@ -28,7 +28,7 @@ class TMDBMovie: MovieObjectType, Mappable {
     title <- map["title"]
     posterPath <- map["poster_path"]
     summary <- map["overview"]
-    releaseDate <- (map["release_date"], DateTransform.custom)
+    releaseDate <- map["release_date"]
     id <- map["id"]
     backdropPath <- map["backdrop_path"]
     score <- map["vote_average"]
