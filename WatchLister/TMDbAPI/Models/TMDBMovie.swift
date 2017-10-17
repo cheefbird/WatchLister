@@ -18,22 +18,21 @@ class TMDBMovie: MovieObjectType, Mappable {
   var title = ""
   var posterPath = ""
   var summary = ""
-  var releaseDate = ""
-  var id = ""
+  var releaseDate = Date(timeIntervalSince1970: 0)
+  var id = 0
   var backdropPath = ""
-  var score = 0.0
+  var score: Float = 0.0
   var isFavorite = false
   
   func mapping(map: Map) {
     title <- map["title"]
     posterPath <- map["poster_path"]
     summary <- map["overview"]
-    releaseDate <- map["release_date"]
+    releaseDate <- (map["release_date"], DateTransform.custom)
     id <- map["id"]
     backdropPath <- map["backdrop_path"]
     score <- map["vote_average"]
   }
-  
   
   
   

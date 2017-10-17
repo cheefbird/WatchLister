@@ -9,8 +9,8 @@
 import Foundation
 
 
-typealias MovieResponse = (_ movie: Movie?, _ error: Error?) -> ()
-typealias MoviesResponse = (_ movies: [Movie], _ error: Error?) -> ()
+typealias MovieResponse = (_ movie: MovieObjectType?, _ error: Error?) -> ()
+typealias MoviesResponse = (_ movies: [MovieObjectType], _ error: Error?) -> ()
 
 
 protocol MovieServiceType: class {

@@ -12,6 +12,7 @@
 		06019D721F92E9ED0003AD1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06019D701F92E9ED0003AD1D /* Main.storyboard */; };
 		06019D741F92E9ED0003AD1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06019D731F92E9ED0003AD1D /* Assets.xcassets */; };
 		06019D771F92E9ED0003AD1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06019D751F92E9ED0003AD1D /* LaunchScreen.storyboard */; };
+		06271A931F95A3A4003B130E /* Movie+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06271A921F95A3A4003B130E /* Movie+DateFormatter.swift */; };
 		06372AF41F9443D0002D9A9C /* MovieObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06372AF31F9443D0002D9A9C /* MovieObjectType.swift */; };
 		063CB07B1F9447780027226E /* MovieServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063CB07A1F9447780027226E /* MovieServiceType.swift */; };
 		063CB07F1F944B240027226E /* TMDBMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063CB07E1F944B240027226E /* TMDBMovie.swift */; };
@@ -23,6 +24,7 @@
 		06BFC4DF1F933F4C0096F70C /* MoviesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4DE1F933F4C0096F70C /* MoviesNavigator.swift */; };
 		06BFC4E21F9344930096F70C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4E11F9344930096F70C /* Movie.swift */; };
 		06DBD2581F958C39002B2946 /* NetworkServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DBD2571F958C39002B2946 /* NetworkServiceType.swift */; };
+		06DBD25A1F9596D2002B2946 /* NetworkMovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DBD2591F9596D2002B2946 /* NetworkMovieService.swift */; };
 		0744EBA1178FBD2E10A37C40 /* Pods_WatchLister.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6434AB4336935AD6415C53A /* Pods_WatchLister.framework */; };
 		E735BD1345A307DAEA338217 /* Pods_WatchListerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FC1CFA0CC14D63C720907E /* Pods_WatchListerTests.framework */; };
 /* End PBXBuildFile section */
@@ -47,6 +49,7 @@
 		06019D781F92E9ED0003AD1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06019D7D1F92E9ED0003AD1D /* WatchListerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchListerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06019D831F92E9ED0003AD1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06271A921F95A3A4003B130E /* Movie+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+DateFormatter.swift"; sourceTree = "<group>"; };
 		06372AF31F9443D0002D9A9C /* MovieObjectType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieObjectType.swift; sourceTree = "<group>"; };
 		063CB07A1F9447780027226E /* MovieServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceType.swift; sourceTree = "<group>"; };
 		063CB07E1F944B240027226E /* TMDBMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMovie.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		06BFC4DE1F933F4C0096F70C /* MoviesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesNavigator.swift; sourceTree = "<group>"; };
 		06BFC4E11F9344930096F70C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		06DBD2571F958C39002B2946 /* NetworkServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceType.swift; sourceTree = "<group>"; };
+		06DBD2591F9596D2002B2946 /* NetworkMovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMovieService.swift; sourceTree = "<group>"; };
 		27FC1CFA0CC14D63C720907E /* Pods_WatchListerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchListerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFA24A8E58AF3425AE68B68 /* Pods-WatchLister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchLister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchLister/Pods-WatchLister.debug.xcconfig"; sourceTree = "<group>"; };
 		9DC9A412F9B487401F0D9599 /* Pods-WatchListerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchListerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchListerTests/Pods-WatchListerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				06372AF11F944371002D9A9C /* Domain */,
 				069C6B291F92FACF00E5D470 /* TMDbAPI */,
 				06BFC4E01F9344720096F70C /* Models */,
+				06271A911F95A37D003B130E /* Utility */,
 				06019D6C1F92E9ED0003AD1D /* AppDelegate.swift */,
 				06019D731F92E9ED0003AD1D /* Assets.xcassets */,
 				06BFC4DA1F9338B90096F70C /* Application */,
@@ -129,6 +134,14 @@
 				06019D831F92E9ED0003AD1D /* Info.plist */,
 			);
 			path = WatchListerTests;
+			sourceTree = "<group>";
+		};
+		06271A911F95A37D003B130E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				06271A921F95A3A4003B130E /* Movie+DateFormatter.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		06372AF11F944371002D9A9C /* Domain */ = {
@@ -194,9 +207,9 @@
 		069C6B291F92FACF00E5D470 /* TMDbAPI */ = {
 			isa = PBXGroup;
 			children = (
-				06DBD2541F957BD6002B2946 /* Services */,
 				063CB07D1F944AFC0027226E /* Models */,
 				063CB07C1F944AE80027226E /* Router */,
+				06DBD2541F957BD6002B2946 /* Services */,
 			);
 			path = TMDbAPI;
 			sourceTree = "<group>";
@@ -246,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				06DBD2571F958C39002B2946 /* NetworkServiceType.swift */,
+				06DBD2591F9596D2002B2946 /* NetworkMovieService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -502,7 +516,9 @@
 				063CB07F1F944B240027226E /* TMDBMovie.swift in Sources */,
 				06BFC4DC1F9338CE0096F70C /* Application.swift in Sources */,
 				06019D6F1F92E9ED0003AD1D /* ViewController.swift in Sources */,
+				06271A931F95A3A4003B130E /* Movie+DateFormatter.swift in Sources */,
 				069C6B341F9302C200E5D470 /* MoviesRouter.swift in Sources */,
+				06DBD25A1F9596D2002B2946 /* NetworkMovieService.swift in Sources */,
 				06DBD2581F958C39002B2946 /* NetworkServiceType.swift in Sources */,
 				06019D6D1F92E9ED0003AD1D /* AppDelegate.swift in Sources */,
 				063CB07B1F9447780027226E /* MovieServiceType.swift in Sources */,

@@ -10,10 +10,10 @@ import Foundation
 
 
 protocol MovieObjectType {
-    var title: Int { get }
+    var title: String { get }
     var posterPath: String { get }
     var summary: String { get }
-    var releaseDate: String { get }
+    var releaseDate: Date { get }
     var id: Int { get }
     var backdropPath: String { get }
     var score: Float { get }
