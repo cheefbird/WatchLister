@@ -32,9 +32,30 @@ class RealmMovieService: MovieServiceType {
     
     // MARK: - From Realm
     
-    fileprivate func getMovieFromDb(withId id: Int, completion: @escaping MovieResponse) {
+    fileprivate func getMovieFromRealm(withId id: Int, completion: @escaping MovieResponse) {
         let object = realm.object(ofType: RealmMovie.self, forPrimaryKey: id)
         completion(object, nil)
+    }
+    
+    fileprivate func getMovieFromNetwork(withId id: Int, completion: @escaping MovieResponse) {
+        
+    }
+    
+    
+    // MARK: - Persist
+    
+    fileprivate func persist(_ movie: MovieObjectType?) {
+        guard let movie = movie else { return }
+        
+        persist([movie])
+    }
+    
+    fileprivate func persist(_ movies: [MovieObjectType]) {
+        let objects = movies.map { RealmMovie(copy: $0) }
+        
+        try! realm.write {
+            realm.add(objects, update: true)
+        }
     }
     
 }
