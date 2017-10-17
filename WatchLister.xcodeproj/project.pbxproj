@@ -12,6 +12,7 @@
 		06019D721F92E9ED0003AD1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06019D701F92E9ED0003AD1D /* Main.storyboard */; };
 		06019D741F92E9ED0003AD1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06019D731F92E9ED0003AD1D /* Assets.xcassets */; };
 		06019D771F92E9ED0003AD1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06019D751F92E9ED0003AD1D /* LaunchScreen.storyboard */; };
+		06271A971F95A888003B130E /* RealmMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06271A961F95A888003B130E /* RealmMovie.swift */; };
 		06372AF41F9443D0002D9A9C /* MovieObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06372AF31F9443D0002D9A9C /* MovieObjectType.swift */; };
 		063CB07B1F9447780027226E /* MovieServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063CB07A1F9447780027226E /* MovieServiceType.swift */; };
 		063CB07F1F944B240027226E /* TMDBMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063CB07E1F944B240027226E /* TMDBMovie.swift */; };
@@ -48,6 +49,7 @@
 		06019D781F92E9ED0003AD1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06019D7D1F92E9ED0003AD1D /* WatchListerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchListerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06019D831F92E9ED0003AD1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06271A961F95A888003B130E /* RealmMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMovie.swift; sourceTree = "<group>"; };
 		06372AF31F9443D0002D9A9C /* MovieObjectType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieObjectType.swift; sourceTree = "<group>"; };
 		063CB07A1F9447780027226E /* MovieServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceType.swift; sourceTree = "<group>"; };
 		063CB07E1F944B240027226E /* TMDBMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMovie.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				06372AF11F944371002D9A9C /* Domain */,
 				069C6B291F92FACF00E5D470 /* TMDbAPI */,
+				06271A941F95A82D003B130E /* Realm */,
 				06BFC4E01F9344720096F70C /* Models */,
 				06271A911F95A37D003B130E /* Utility */,
 				06019D6C1F92E9ED0003AD1D /* AppDelegate.swift */,
@@ -139,6 +142,22 @@
 			children = (
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		06271A941F95A82D003B130E /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				06271A951F95A853003B130E /* Models */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		06271A951F95A853003B130E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				06271A961F95A888003B130E /* RealmMovie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		06372AF11F944371002D9A9C /* Domain */ = {
@@ -516,6 +535,7 @@
 				069C6B341F9302C200E5D470 /* MoviesRouter.swift in Sources */,
 				06DBD25A1F9596D2002B2946 /* NetworkMovieService.swift in Sources */,
 				06DBD2581F958C39002B2946 /* NetworkServiceType.swift in Sources */,
+				06271A971F95A888003B130E /* RealmMovie.swift in Sources */,
 				06019D6D1F92E9ED0003AD1D /* AppDelegate.swift in Sources */,
 				063CB07B1F9447780027226E /* MovieServiceType.swift in Sources */,
 				069C6B2B1F92FB1000E5D470 /* RouterType.swift in Sources */,
