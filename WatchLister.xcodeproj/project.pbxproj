@@ -22,6 +22,7 @@
 		06BFC4DC1F9338CE0096F70C /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4DB1F9338CE0096F70C /* Application.swift */; };
 		06BFC4DF1F933F4C0096F70C /* MoviesNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4DE1F933F4C0096F70C /* MoviesNavigator.swift */; };
 		06BFC4E21F9344930096F70C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BFC4E11F9344930096F70C /* Movie.swift */; };
+		06DBD2581F958C39002B2946 /* NetworkServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DBD2571F958C39002B2946 /* NetworkServiceType.swift */; };
 		0744EBA1178FBD2E10A37C40 /* Pods_WatchLister.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6434AB4336935AD6415C53A /* Pods_WatchLister.framework */; };
 		E735BD1345A307DAEA338217 /* Pods_WatchListerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FC1CFA0CC14D63C720907E /* Pods_WatchListerTests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		06BFC4DB1F9338CE0096F70C /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		06BFC4DE1F933F4C0096F70C /* MoviesNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesNavigator.swift; sourceTree = "<group>"; };
 		06BFC4E11F9344930096F70C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		06DBD2571F958C39002B2946 /* NetworkServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceType.swift; sourceTree = "<group>"; };
 		27FC1CFA0CC14D63C720907E /* Pods_WatchListerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchListerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFA24A8E58AF3425AE68B68 /* Pods-WatchLister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchLister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchLister/Pods-WatchLister.debug.xcconfig"; sourceTree = "<group>"; };
 		9DC9A412F9B487401F0D9599 /* Pods-WatchListerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchListerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchListerTests/Pods-WatchListerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				06372AF11F944371002D9A9C /* Domain */,
-				069C6B291F92FACF00E5D470 /* API */,
+				069C6B291F92FACF00E5D470 /* TMDbAPI */,
 				06BFC4E01F9344720096F70C /* Models */,
 				06019D6C1F92E9ED0003AD1D /* AppDelegate.swift */,
 				06019D731F92E9ED0003AD1D /* Assets.xcassets */,
@@ -189,13 +191,14 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		069C6B291F92FACF00E5D470 /* API */ = {
+		069C6B291F92FACF00E5D470 /* TMDbAPI */ = {
 			isa = PBXGroup;
 			children = (
+				06DBD2541F957BD6002B2946 /* Services */,
 				063CB07D1F944AFC0027226E /* Models */,
 				063CB07C1F944AE80027226E /* Router */,
 			);
-			path = API;
+			path = TMDbAPI;
 			sourceTree = "<group>";
 		};
 		069C6B2E1F92FD1800E5D470 /* ApiTests */ = {
@@ -237,6 +240,14 @@
 				06BFC4E11F9344930096F70C /* Movie.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		06DBD2541F957BD6002B2946 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				06DBD2571F958C39002B2946 /* NetworkServiceType.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		A5F245A5EDDE498584E14CA3 /* Frameworks */ = {
@@ -492,6 +503,7 @@
 				06BFC4DC1F9338CE0096F70C /* Application.swift in Sources */,
 				06019D6F1F92E9ED0003AD1D /* ViewController.swift in Sources */,
 				069C6B341F9302C200E5D470 /* MoviesRouter.swift in Sources */,
+				06DBD2581F958C39002B2946 /* NetworkServiceType.swift in Sources */,
 				06019D6D1F92E9ED0003AD1D /* AppDelegate.swift in Sources */,
 				063CB07B1F9447780027226E /* MovieServiceType.swift in Sources */,
 				069C6B2B1F92FB1000E5D470 /* RouterType.swift in Sources */,
