@@ -15,13 +15,14 @@ enum MoviesRouter: RouterType, URLRequestConvertible {
   // MARK: - Cases
   
   case getMovies
+  case getMovie(id: Int)
   
   
   // MARK: - Properties
   
   var method: HTTPMethod {
     switch self {
-    case .getMovies:
+    case .getMovies, .getMovie:
       return .get
     }
   }
@@ -31,6 +32,9 @@ enum MoviesRouter: RouterType, URLRequestConvertible {
     switch self {
     case .getMovies:
       return "discover/movie/"
+      
+    case .getMovie(let id):
+      return "movie/\(id)"
     }
   }
   
@@ -44,6 +48,9 @@ enum MoviesRouter: RouterType, URLRequestConvertible {
     case .getMovies:
       params["sort_by"] = "popularity.desc"
       params["include_adult"] = "false"
+      
+    default:
+      break
     }
     
     return params
