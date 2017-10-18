@@ -14,7 +14,7 @@ enum MoviesRouter: RouterType, URLRequestConvertible {
   
   // MARK: - Cases
   
-  case getMovies
+  case getMovies(page: Int)
   case getMovie(id: Int)
   
   
@@ -45,9 +45,10 @@ enum MoviesRouter: RouterType, URLRequestConvertible {
     params["api_key"] = privateKey
     
     switch self {
-    case .getMovies:
+    case .getMovies(let page):
       params["sort_by"] = "popularity.desc"
       params["include_adult"] = "false"
+      params["page"] = page
       
     default:
       break
