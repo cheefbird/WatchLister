@@ -21,7 +21,7 @@ class NetworkMovieService: NetworkServiceType, MovieServiceType {
   }
   
   func getMovies(forPage page: Int, completion: @escaping MoviesResponse) {
-    request(at: MoviesRouter.getMovies)
+    request(at: MoviesRouter.getMovies(page: page))
         .responseObject { (callback: DataResponse<TMDBMovie>) in
             
     }
