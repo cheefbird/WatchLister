@@ -12,11 +12,13 @@ import RealmSwift
 
 class RealmMovieService: MovieServiceType {
   func getMovie(byId id: Int, completion: @escaping MovieResponse) {
-    
+    getMovieFromRealm(withId: id, completion: completion)
+    getMovieFromNetwork(withId: id, completion: completion)
   }
   
   func getMovies(forPage page: Int, completion: @escaping MoviesResponse) {
-    
+    getMoviesFromRealm(completion: completion)
+    getMoviesFromNetwork(forPage: page, completion: completion)
   }
   
   

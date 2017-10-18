@@ -12,6 +12,8 @@
 		06019D721F92E9ED0003AD1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06019D701F92E9ED0003AD1D /* Main.storyboard */; };
 		06019D741F92E9ED0003AD1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06019D731F92E9ED0003AD1D /* Assets.xcassets */; };
 		06019D771F92E9ED0003AD1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06019D751F92E9ED0003AD1D /* LaunchScreen.storyboard */; };
+		06183A821F96E9C7008A03C7 /* MoviesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06183A811F96E9C7008A03C7 /* MoviesListViewModel.swift */; };
+		06183A841F96E9F2008A03C7 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06183A831F96E9F2008A03C7 /* ViewModelType.swift */; };
 		06271A971F95A888003B130E /* RealmMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06271A961F95A888003B130E /* RealmMovie.swift */; };
 		06271A9B1F95AB2C003B130E /* RealmMovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06271A9A1F95AB2C003B130E /* RealmMovieService.swift */; };
 		06372AF41F9443D0002D9A9C /* MovieObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06372AF31F9443D0002D9A9C /* MovieObjectType.swift */; };
@@ -50,6 +52,8 @@
 		06019D781F92E9ED0003AD1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06019D7D1F92E9ED0003AD1D /* WatchListerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchListerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06019D831F92E9ED0003AD1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06183A811F96E9C7008A03C7 /* MoviesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewModel.swift; sourceTree = "<group>"; };
+		06183A831F96E9F2008A03C7 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		06271A961F95A888003B130E /* RealmMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMovie.swift; sourceTree = "<group>"; };
 		06271A9A1F95AB2C003B130E /* RealmMovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMovieService.swift; sourceTree = "<group>"; };
 		06372AF31F9443D0002D9A9C /* MovieObjectType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieObjectType.swift; sourceTree = "<group>"; };
@@ -115,14 +119,15 @@
 		06019D6B1F92E9ED0003AD1D /* WatchLister */ = {
 			isa = PBXGroup;
 			children = (
+				06019D6C1F92E9ED0003AD1D /* AppDelegate.swift */,
 				06372AF11F944371002D9A9C /* Domain */,
 				069C6B291F92FACF00E5D470 /* TMDbAPI */,
-				06271A941F95A82D003B130E /* Realm */,
+				06271A941F95A82D003B130E /* RealmServices */,
 				06BFC4E01F9344720096F70C /* Models */,
-				06271A911F95A37D003B130E /* Utility */,
-				06019D731F92E9ED0003AD1D /* Assets.xcassets */,
 				069C6B281F92F7CC00E5D470 /* Scenes */,
 				069C6B271F92F7B200E5D470 /* Storyboards */,
+				06271A911F95A37D003B130E /* Utility */,
+				06183A7F1F96E917008A03C7 /* Assets */,
 				069C6B351F9304BC00E5D470 /* Configuration */,
 			);
 			path = WatchLister;
@@ -137,6 +142,23 @@
 			path = WatchListerTests;
 			sourceTree = "<group>";
 		};
+		06183A7F1F96E917008A03C7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				06019D731F92E9ED0003AD1D /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		06183A801F96E999008A03C7 /* MoviesListView */ = {
+			isa = PBXGroup;
+			children = (
+				06019D6E1F92E9ED0003AD1D /* MoviesListViewController.swift */,
+				06183A811F96E9C7008A03C7 /* MoviesListViewModel.swift */,
+			);
+			path = MoviesListView;
+			sourceTree = "<group>";
+		};
 		06271A911F95A37D003B130E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,13 +166,13 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
-		06271A941F95A82D003B130E /* Realm */ = {
+		06271A941F95A82D003B130E /* RealmServices */ = {
 			isa = PBXGroup;
 			children = (
 				06271A951F95A853003B130E /* Models */,
 				06271A991F95AB15003B130E /* Services */,
 			);
-			path = Realm;
+			path = RealmServices;
 			sourceTree = "<group>";
 		};
 		06271A951F95A853003B130E /* Models */ = {
@@ -172,7 +194,6 @@
 		06372AF11F944371002D9A9C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				06019D6C1F92E9ED0003AD1D /* AppDelegate.swift */,
 				06BFC4DA1F9338B90096F70C /* Application */,
 				06372AF21F944381002D9A9C /* Models */,
 				063CB0791F94473B0027226E /* Services */,
@@ -226,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				06BFC4DD1F933EFB0096F70C /* Protocols */,
-				06019D6E1F92E9ED0003AD1D /* MoviesListViewController.swift */,
+				06183A801F96E999008A03C7 /* MoviesListView */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -270,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				06BFC4DE1F933F4C0096F70C /* MoviesNavigator.swift */,
+				06183A831F96E9F2008A03C7 /* ViewModelType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -537,6 +559,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06183A821F96E9C7008A03C7 /* MoviesListViewModel.swift in Sources */,
 				06BFC4E21F9344930096F70C /* Movie.swift in Sources */,
 				06372AF41F9443D0002D9A9C /* MovieObjectType.swift in Sources */,
 				06BFC4DF1F933F4C0096F70C /* MoviesNavigator.swift in Sources */,
@@ -548,6 +571,7 @@
 				06DBD25A1F9596D2002B2946 /* NetworkMovieService.swift in Sources */,
 				06DBD2581F958C39002B2946 /* NetworkServiceType.swift in Sources */,
 				06271A971F95A888003B130E /* RealmMovie.swift in Sources */,
+				06183A841F96E9F2008A03C7 /* ViewModelType.swift in Sources */,
 				06019D6D1F92E9ED0003AD1D /* AppDelegate.swift in Sources */,
 				063CB07B1F9447780027226E /* MovieServiceType.swift in Sources */,
 				069C6B2B1F92FB1000E5D470 /* RouterType.swift in Sources */,

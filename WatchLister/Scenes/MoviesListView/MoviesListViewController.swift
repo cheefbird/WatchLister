@@ -18,7 +18,6 @@ class MoviesListViewController: UIViewController {
   // MARK: - Properties
   
   
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     
