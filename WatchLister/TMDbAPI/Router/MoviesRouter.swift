@@ -31,7 +31,7 @@ enum MoviesRouter: RouterType, URLRequestConvertible {
   var path: String {
     switch self {
     case .getMovies:
-      return "discover/movie/"
+      return "discover/movie"
       
     case .getMovie(let id):
       return "movie/\(id)"

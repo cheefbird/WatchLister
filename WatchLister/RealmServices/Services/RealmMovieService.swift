@@ -11,15 +11,6 @@ import RealmSwift
 
 
 class RealmMovieService: MovieServiceType {
-  func getMovie(byId id: Int, completion: @escaping MovieResponse) {
-    getMovieFromRealm(withId: id, completion: completion)
-    getMovieFromNetwork(withId: id, completion: completion)
-  }
-  
-  func getMovies(forPage page: Int, completion: @escaping MoviesResponse) {
-    getMoviesFromRealm(completion: completion)
-    getMoviesFromNetwork(forPage: page, completion: completion)
-  }
   
   
   init(baseService: MovieServiceType) {
@@ -34,12 +25,22 @@ class RealmMovieService: MovieServiceType {
   
   // MARK: - From Realm
   
+  func getMovie(byId id: Int, completion: @escaping MovieResponse) {
+    getMovieFromRealm(withId: id, completion: completion)
+    getMovieFromService(withId: id, completion: completion)
+  }
+  
+  func getMovies(forPage page: Int, completion: @escaping MoviesResponse) {
+    getMoviesFromRealm(completion: completion)
+    getMoviesFromService(forPage: page, completion: completion)
+  }
+  
   fileprivate func getMovieFromRealm(withId id: Int, completion: @escaping MovieResponse) {
     let object = realm.object(ofType: RealmMovie.self, forPrimaryKey: id)
     completion(object, nil)
   }
   
-  fileprivate func getMovieFromNetwork(withId id: Int, completion: @escaping MovieResponse) {
+  fileprivate func getMovieFromService(withId id: Int, completion: @escaping MovieResponse) {
     
     baseService.getMovie(byId: id) { movie, error in
       self.persist(movie)
@@ -54,7 +55,7 @@ class RealmMovieService: MovieServiceType {
     completion(Array(objects), nil)
   }
   
-  fileprivate func getMoviesFromNetwork(forPage page: Int, completion: @escaping MoviesResponse) {
+  fileprivate func getMoviesFromService(forPage page: Int, completion: @escaping MoviesResponse) {
     baseService.getMovies(forPage: page) { movies, error in
       self.persist(movies)
       completion(movies, error)

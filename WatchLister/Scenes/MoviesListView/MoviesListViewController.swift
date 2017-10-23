@@ -12,29 +12,26 @@ class MoviesListViewController: UIViewController {
   
   // MARK: - Outlets
   
-  @IBOutlet weak var tableView: UITableView!
-  
   
   // MARK: - Properties
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    let baseService = NetworkMovieService()
+    let service = RealmMovieService(baseService: baseService)
+    var callbackCounter = 0
+    
+    service.getMovies(forPage: 1) { (movies, error) in
+      callbackCounter += 1
+      if let error = error {
+        print("ERROR: \(error.localizedDescription)")
+      } else {
+        print("Found \(movies.count) movies (callback #\(callbackCounter)")
+      }
+    }
+    
   }
 }
 
-
-extension MoviesListViewController: UITableViewDataSource {
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 5
-  }
-  
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    return UITableViewCell()
-  }
-  
-}
 
